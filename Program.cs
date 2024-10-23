@@ -23,7 +23,7 @@ class HigherOrLowerGame
     // This function introduces the game and provides basic instructions on how to play
     static void DisplayWelcomeMessage()
     {
-        Console.WriteLine("Welcome to the Higher or Lower game with unique guesses!");
+        Console.WriteLine("Welcome to the Higher or Lower game!");
         Console.WriteLine("Your goal is to guess the secret number between 1 and 100.");
         Console.WriteLine("You have 10 attempts, and each guess must be unique.");
         Console.WriteLine("Let's begin!");
