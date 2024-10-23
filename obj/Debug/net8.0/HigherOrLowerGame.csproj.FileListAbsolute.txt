@@ -1,0 +1,14 @@
+/Users/husslaos/Documents/University/ProgrammingProjects/HigherOrLowerGame/bin/Debug/net8.0/HigherOrLowerGame
+/Users/husslaos/Documents/University/ProgrammingProjects/HigherOrLowerGame/bin/Debug/net8.0/HigherOrLowerGame.deps.json
+/Users/husslaos/Documents/University/ProgrammingProjects/HigherOrLowerGame/bin/Debug/net8.0/HigherOrLowerGame.runtimeconfig.json
+/Users/husslaos/Documents/University/ProgrammingProjects/HigherOrLowerGame/bin/Debug/net8.0/HigherOrLowerGame.dll
+/Users/husslaos/Documents/University/ProgrammingProjects/HigherOrLowerGame/bin/Debug/net8.0/HigherOrLowerGame.pdb
+/Users/husslaos/Documents/University/ProgrammingProjects/HigherOrLowerGame/obj/Debug/net8.0/HigherOrLowerGame.GeneratedMSBuildEditorConfig.editorconfig
+/Users/husslaos/Documents/University/ProgrammingProjects/HigherOrLowerGame/obj/Debug/net8.0/HigherOrLowerGame.AssemblyInfoInputs.cache
+/Users/husslaos/Documents/University/ProgrammingProjects/HigherOrLowerGame/obj/Debug/net8.0/HigherOrLowerGame.AssemblyInfo.cs
+/Users/husslaos/Documents/University/ProgrammingProjects/HigherOrLowerGame/obj/Debug/net8.0/HigherOrLowerGame.csproj.CoreCompileInputs.cache
+/Users/husslaos/Documents/University/ProgrammingProjects/HigherOrLowerGame/obj/Debug/net8.0/HigherOrLowerGame.dll
+/Users/husslaos/Documents/University/ProgrammingProjects/HigherOrLowerGame/obj/Debug/net8.0/refint/HigherOrLowerGame.dll
+/Users/husslaos/Documents/University/ProgrammingProjects/HigherOrLowerGame/obj/Debug/net8.0/HigherOrLowerGame.pdb
+/Users/husslaos/Documents/University/ProgrammingProjects/HigherOrLowerGame/obj/Debug/net8.0/HigherOrLowerGame.genruntimeconfig.cache
+/Users/husslaos/Documents/University/ProgrammingProjects/HigherOrLowerGame/obj/Debug/net8.0/ref/HigherOrLowerGame.dll
