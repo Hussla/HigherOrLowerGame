@@ -84,7 +84,11 @@ class HigherOrLowerGame // Class for the game
 
         // Add the guess to the set of unique guesses
         uniqueGuesses.Add(guess);
-        numberOfGuesses++;
+        numberOfGuesses++; // '++' adds 1 to the current value evrytime the player gueesses 
+                           // same as numberOfGuesses += 1; or numberOfGuesses = numberOfGuesses + 1;
+
+                      
+
 
         // Provide hints based on the distance from the secret number
         if (previousGuess.HasValue)
