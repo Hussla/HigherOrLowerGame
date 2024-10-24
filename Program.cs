@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
-class HigherOrLowerGame
+class HigherOrLowerGame // Class for the game 
 {
-    static void Main()
+    static void Main() // Had no choice but to use this
     {
         // Display a welcome message to introduce the game
         DisplayWelcomeMessage();
 
         // Generate the secret number between 1 and 100 and set the maximum attempts allowed
-        int secretNumber = GenerateSecretNumber(1, 100);
+        int secretNumber = GenerateSecretNumber(1, 101);
         int maxAttempts = 10;
 
-        // Start the game with the generated secret number and max attempts
+        // Start the game with the generated secret number and max attempts that the player has
         PlayGame(secretNumber, maxAttempts);
 
         // Display a message to indicate the end of the game
@@ -37,7 +38,7 @@ class HigherOrLowerGame
         return random.Next(min, max + 1);
     }
 
-    // Main game logic, keeps track of guesses and checks if the player wins
+    // keeps track of guesses and checks if the player wins
     // This function controls the overall gameplay, including tracking the number of guesses and whether the player wins
     static void PlayGame(int secretNumber, int maxAttempts)
     {
@@ -50,9 +51,11 @@ class HigherOrLowerGame
         // Loop until the player has either guessed correctly or used all attempts
         while (numberOfGuesses < maxAttempts && !hasGuessedCorrectly)
         {
-            hasGuessedCorrectly = PlayerGuess(secretNumber, uniqueGuesses, ref numberOfGuesses, ref previousGuess);
-        }
-
+            hasGuessedCorrectly = PlayerGuess(secretNumber, uniqueGuesses, ref numberOfGuesses, ref previousGuess); // ref - any changes made to that variable inside a method will also be seen outside of that method. 
+                                                                                                                    // This is useful if you want to keep track of the previous guess and update it during the game.
+                                                                                                                    // taken from https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ref
+        }                                                                                                       
+                                                                                                                    
         // If the player did not guess correctly after using all attempts
         if (!hasGuessedCorrectly)
         {
@@ -62,7 +65,9 @@ class HigherOrLowerGame
 
     // Process a player's guess, providing hints and checking for correctness
     // This function processes each guess, checks if it has been guessed before, gives hints, and evaluates the guess
-    static bool PlayerGuess(int secretNumber, HashSet<int> uniqueGuesses, ref int numberOfGuesses, ref int? previousGuess)
+    static bool PlayerGuess(int secretNumber, HashSet<int> uniqueGuesses, ref int numberOfGuesses, ref int? previousGuess) // int? - means the variable can either be a number or null, can reprsent no value
+                                                                                                                           // taken from https://stackoverflow.com/questions/121680/whats-the-difference-between-int-and-int-in-c
+
     {
         int guess = GetPlayerGuess();
         if (guess == -1)
@@ -73,7 +78,7 @@ class HigherOrLowerGame
         // Check if the guess has already been made
         if (uniqueGuesses.Contains(guess))
         {
-            Console.WriteLine("You've already guessed that number. Please try a different one.");
+            Console.WriteLine("You've already guessed that number. Please try a different one."); 
             return false;
         }
 
@@ -105,7 +110,7 @@ class HigherOrLowerGame
     }
 
     // Get the player's guess, handling invalid input
-    // This function prompts the player for a guess and handles any invalid input (e.g., non-numeric values)
+    // This function prompts the player for a guess and handles any invalid input (e.g. words)
     static int GetPlayerGuess()
     {
         Console.Write("Enter your guess: ");
@@ -113,22 +118,22 @@ class HigherOrLowerGame
         {
             return Convert.ToInt32(Console.ReadLine());
         }
-        catch (FormatException)
+        catch (FormatException) // Learnt this when I studied Robustness with mim 
         {
             Console.WriteLine("Invalid input. Please enter a valid number between 1 and 100.");
             return -1;
         }
     }
 
-    // Calculate the distance between two numbers without using Math.Abs
-    // This function calculates the absolute difference between two numbers by comparing them directly
+    // Calculate the distance between two numbers 
+    // This function calculates the difference between two numbers by comparing them directly
     static int CalculateDistance(int a, int b)
     {
         return a > b ? a - b : b - a;
     }
 
     // Evaluate the player's guess against the secret number
-    // This function checks if the player's guess is too high, too low, or correct and provides appropriate feedback
+    // This function checks if the player's guess is too high, too low, or correct and provides feedback
     static bool EvaluateGuess(int secretNumber, int guess, int numberOfGuesses)
     {
         if (guess > secretNumber)
